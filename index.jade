@@ -1,0 +1,30 @@
+extends views/layout
+
+block content
+	section.container.tabServices
+		.row
+			.col-xs-12
+				h1.text-center
+					| View our solutions
+				br
+				div
+					// Nav tabs
+					ul.nav.nav-tabs.nav-justified(role="tablist")
+						li.active(role="presentation")
+							a( href="#netEquipemntManufacturers" aria-controls="netEquipemntManufacturers" role="tab" data-toggle="tab")
+								h4 Network Equipment Manufacturers
+						li(role="presentation")
+							a(href="#OperatorsServiceProviders" aria-controls="OperatorsServiceProviders" role="tab" data-toggle="tab")
+								h4 Operators & Service Providers
+						li(role="presentation")
+							a(href="#VerticalSolutions" aria-controls="VerticalSolutions" role="tab" data-toggle="tab")
+								h4 Vertical Solutions
+
+					// Tab panes
+					.tab-content
+						#netEquipemntManufacturers.tab-pane.fade.in.active(role="tabpanel")
+							include include/services01.jade
+						#OperatorsServiceProviders.tab-pane.fade(role="tabpanel")
+							include include/services02.jade
+						#VerticalSolutions.tab-pane.fade(role="tabpanel")
+							include include/services03.jade
