@@ -1,5 +1,34 @@
+
 $colorBrand: #12636b
 $colorServices01: #ac3836
+
+
+.icon
+	max-width: 80px
+	margin-bottom: -20px
+svg *
+	transition: fill .1s ease-out, opacity .1s ease-out
+
+#dataBase-small, #dataBase-medium
+	opacity: 0
+@media all and (max-width: 800px)
+	#dataBase-small, #dataBase-large
+		opacity: 0
+	#dataBase-medium
+		opacity: 1
+
+@media all and (max-width: 400px)
+	#dataBase-medium, #dataBase-large
+		opacity: 0
+	#dataBase-small
+		opacity: 1
+
+//@media(max-width: 800px)
+//	.icon #dataBase-small, .icon #dataBase-large
+//		opacity: 0
+//@media(max-width: 600px)
+//	.icon #dataBase-medium, .icon #dataBase-large
+//		opacity: 0
 
 body
 	background: desaturate(lighten($colorBrand, 70%), 30%)
